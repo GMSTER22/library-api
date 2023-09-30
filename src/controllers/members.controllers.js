@@ -83,8 +83,8 @@ const updateMember = async (req, res, next) => {
     description: 'Add a Member',
     required: true,
     schema: {
-      $name: 'Michael Bailey',
-      $email: 'michael.bailey@gmail.com',
+      $name: 'Victor Hugo',
+      $email: 'victor.hugo@gmail.com',
       $membership_type: 'Administration',
       $books_borrowed: []
     } 
@@ -99,7 +99,8 @@ const updateMember = async (req, res, next) => {
   const member = {
     name: req.body.name,
     email: req.body.email,
-    membership_type: req.body.membership_type
+    membership_type: req.body.membership_type,
+    books_borrowed: []
   };
 
   try {

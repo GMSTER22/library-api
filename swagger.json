@@ -142,11 +142,65 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Add a Book",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "example": "Company of One"
+                },
+                "author": {
+                  "type": "string",
+                  "example": "Paul Jarvis"
+                },
+                "genre": {
+                  "type": "string",
+                  "example": "Business"
+                },
+                "publication_year": {
+                  "type": "number",
+                  "example": 2018
+                },
+                "isbn": {
+                  "type": "string",
+                  "example": "978-1-9848-5836-8"
+                },
+                "available_copies": {
+                  "type": "number",
+                  "example": 20
+                },
+                "description": {
+                  "type": "string",
+                  "example": "A book about the self-employment revolution"
+                }
+              },
+              "required": [
+                "title",
+                "author",
+                "genre",
+                "publication_year",
+                "isbn",
+                "available_copies",
+                "description"
+              ]
+            }
           }
         ],
         "responses": {
+          "204": {
+            "description": "No Content"
+          },
           "400": {
             "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -293,11 +347,11 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "example": "Michael Bailey"
+                  "example": "Victor Hugo"
                 },
                 "email": {
                   "type": "string",
-                  "example": "michael.bailey@gmail.com"
+                  "example": "victor.hugo@gmail.com"
                 },
                 "membership_type": {
                   "type": "string",

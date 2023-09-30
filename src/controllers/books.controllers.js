@@ -86,7 +86,7 @@ const updateBook = async (req, res, next) => {
   /*  
   #swagger.parameters['obj'] = {
     in: 'body',
-    description: 'Add a book',
+    description: 'Add a Book',
     required: true,
     schema: {
       $title: 'Company of One',
@@ -95,7 +95,7 @@ const updateBook = async (req, res, next) => {
       $publication_year: 2018,
       $isbn: '978-1-9848-5836-8',
       $available_copies: 20,
-      $description: 'A book about the self-employment revolution where normal everyday people leverage what's available in the market to build companies of one person.'
+      $description: 'A book about the self-employment revolution'
     } 
   } 
   */
