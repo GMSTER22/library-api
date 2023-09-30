@@ -5,12 +5,9 @@
     "description": "An API for interacting with books and members informations.",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "library-api-cuda.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "http",
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/": {
       "get": {
@@ -21,16 +18,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        }
-      }
-    },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
