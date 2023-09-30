@@ -1,0 +1,82 @@
+
+# DEVELOPMENT
+
+# Get the API document
+GET http://localhost:8080/api-docs HTTP/1.1
+
+# =====> BOOKS COLLECTION <======
+
+# Get all the books
+GET http://localhost:8080/books HTTP/1.1
+
+# Get book by id
+GET http://localhost:8080/books/65124704687d4bbbb34a0fd7 HTTP/1.1
+
+# Create a book
+POST http://localhost:8080/books HTTP/1.1
+content-type: application/json
+
+{
+  "title": "The Daily Stoic",
+  "author": "Ryan Holiday",
+  "genre": "Philosiphy",
+  "publication_year": 1960,
+  "isbn": "978-0-7352-1173-5",
+  "available_copies": 10,
+  "description": "It is about the stoicisme, an ancient philosophy teaching people how to live a good life" 
+}
+
+# Update a book
+PUT http://localhost:8080/books/65124704687d4bbbb34a0fd7 HTTP/1.1
+content-type: application/json
+
+{
+  "title": "To Kill a Mockingbird",
+  "author": "Harper Lee",
+  "genre": "Fiction",
+  "publication_year": 1960,
+  "isbn": "978-0-7352-1173-5",
+  "available_copies": 10,
+  "description": "Testing purpose, replacing everything else but this." 
+}
+
+# Delete a book
+DELETE http://localhost:8080/books/6505fa52687d4bbbb31673ee HTTP/1.1
+
+
+
+
+# =====> MEMBERS COLLECTION <======
+
+# Get all the members
+GET http://localhost:8080/members HTTP/1.1
+
+# Get member by id
+GET http://localhost:8080/members/6512d2ea687d4bbbb3562c49 HTTP/1.1
+
+# Create a member
+POST http://localhost:8080/members HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Mike Bailey",
+  "email": "mike.bailey@example.com",
+  "membership_type": "Student",
+  "books_borrowed": []
+}
+
+# Update a member
+PUT http://localhost:8080/members/6512d2ea687d4bbbb3562c49 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Michael Bailey",
+  "email": "michael.bailey@gmail.com",
+  "membership_type": "Administration"
+}
+
+# Delete a member
+DELETE http://localhost:8080/members/6512d2ea687d4bbbb3562c49 HTTP/1.1
+
+
+
