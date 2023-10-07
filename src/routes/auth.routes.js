@@ -1,12 +1,8 @@
 const router = require('express').Router();
 const passport = require('passport');
-const {
-  loginHandler,
-  logoutHandler,
-  githubCallbackHandler
-} = require('../controllers/auth.controllers');
+const { logoutHandler, githubCallbackHandler } = require('../controllers/auth.controllers');
 
-router.get('/login', passport.authenticate('github'), loginHandler);
+router.get('/login', passport.authenticate('github'));
 
 router.get('/logout', logoutHandler);
 

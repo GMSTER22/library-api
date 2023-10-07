@@ -5,11 +5,9 @@
     "description": "An API for interacting with books and members informations.",
     "version": "1.0.0"
   },
-  "host": "library-api-cuda.onrender.com",
+  "host": "https://library-api-cuda.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "securityDefinitions": {
     "oAuthSample": {
       "type": "oauth2",
@@ -25,23 +23,8 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [
-          "Home"
-        ],
+        "tags": ["Home"],
         "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/login": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "description": "Endpoint to login",
         "responses": {
           "default": {
             "description": ""
@@ -51,9 +34,7 @@
     },
     "/logout": {
       "get": {
-        "tags": [
-          "Authentication"
-        ],
+        "tags": ["Authentication"],
         "description": "Endpoint to logout",
         "responses": {
           "default": {
@@ -64,13 +45,9 @@
     },
     "/books/": {
       "get": {
-        "tags": [
-          "Books"
-        ],
+        "tags": ["Books"],
         "description": "Endpoint to get all Books",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -78,9 +55,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Books"
-        ],
+        "tags": ["Books"],
         "description": "Endpoint to create a specific Book",
         "parameters": [
           {
@@ -148,22 +123,16 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_books"
-            ]
+            "oAuthSample": ["write_books"]
           }
         ]
       }
     },
     "/books/{id}": {
       "get": {
-        "tags": [
-          "Books"
-        ],
+        "tags": ["Books"],
         "description": "Endpoint to get a specific Book",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -182,9 +151,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Books"
-        ],
+        "tags": ["Books"],
         "description": "Endpoint to update a specific Book",
         "parameters": [
           {
@@ -258,16 +225,12 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_books"
-            ]
+            "oAuthSample": ["write_books"]
           }
         ]
       },
       "delete": {
-        "tags": [
-          "Books"
-        ],
+        "tags": ["Books"],
         "description": "Endpoint to delete a specific Book",
         "parameters": [
           {
@@ -293,22 +256,16 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_books"
-            ]
+            "oAuthSample": ["write_books"]
           }
         ]
       }
     },
     "/members/": {
       "get": {
-        "tags": [
-          "Members"
-        ],
+        "tags": ["Members"],
         "description": "Endpoint to get all Members",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -316,9 +273,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Members"
-        ],
+        "tags": ["Members"],
         "description": "Endpoint to create a specific Member",
         "parameters": [
           {
@@ -347,12 +302,7 @@
                   "items": {}
                 }
               },
-              "required": [
-                "name",
-                "email",
-                "membership_type",
-                "books_borrowed"
-              ]
+              "required": ["name", "email", "membership_type", "books_borrowed"]
             }
           }
         ],
@@ -372,22 +322,16 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_members"
-            ]
+            "oAuthSample": ["write_members"]
           }
         ]
       }
     },
     "/members/{id}": {
       "get": {
-        "tags": [
-          "Members"
-        ],
+        "tags": ["Members"],
         "description": "Endpoint to get a specific Member",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -406,9 +350,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Members"
-        ],
+        "tags": ["Members"],
         "description": "Endpoint to update a specific Member",
         "parameters": [
           {
@@ -443,12 +385,7 @@
                   "items": {}
                 }
               },
-              "required": [
-                "name",
-                "email",
-                "membership_type",
-                "books_borrowed"
-              ]
+              "required": ["name", "email", "membership_type", "books_borrowed"]
             }
           }
         ],
@@ -468,16 +405,12 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_members"
-            ]
+            "oAuthSample": ["write_members"]
           }
         ]
       },
       "delete": {
-        "tags": [
-          "Members"
-        ],
+        "tags": ["Members"],
         "description": "Endpoint to delete a specific Member",
         "parameters": [
           {
@@ -503,9 +436,7 @@
         },
         "security": [
           {
-            "oAuthSample": [
-              "write_members"
-            ]
+            "oAuthSample": ["write_members"]
           }
         ]
       }

@@ -1,9 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-const loginHandler = (req, res) => {
-  // #swagger.tags=['Authentication']
-  // #swagger.description = 'Endpoint to login'
-};
-
 const logoutHandler = (req, res, next) => {
   // #swagger.tags=['Authentication']
   // #swagger.description = 'Endpoint to logout'
@@ -20,7 +14,6 @@ const githubCallbackHandler = (req, res) => {
 };
 
 module.exports = {
-  loginHandler,
   logoutHandler,
   githubCallbackHandler
 };
