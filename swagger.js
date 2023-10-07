@@ -7,7 +7,19 @@ const doc = {
     description: 'An API for interacting with books and members informations.'
   },
   host: 'localhost:8080',
-  schemes: ['http', 'https']
+  schemes: ['http', 'https'],
+  securityDefinitions: {
+    oAuthSample: {
+      type: 'oauth2',
+      description: 'This API uses OAuth 2 with the Authorization code grant flow',
+      authorizationUrl: 'http://localhost:8080/login',
+      flow: 'authorizationCode',
+      scopes: {
+        write_books: 'modify books in your account',
+        write_members: 'modify members in your account'
+      }
+    }
+  }
 };
 
 const outputFile = 'swagger.json';

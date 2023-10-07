@@ -57,6 +57,11 @@ const addBook = async (req, res, next) => {
     } 
   } 
   */
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_books"
+      ]
+  }] */
   const book = {
     title: req.body.title,
     author: req.body.author,
@@ -99,6 +104,11 @@ const updateBook = async (req, res, next) => {
     } 
   } 
   */
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_books"
+      ]
+  }] */
   const { id } = req.params;
 
   if (!ObjectId.isValid(id)) {
@@ -136,6 +146,11 @@ const updateBook = async (req, res, next) => {
 const deleteBook = async (req, res, next) => {
   // #swagger.tags=['Books']
   // #swagger.description = 'Endpoint to delete a specific Book'
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_books"
+      ]
+  }] */
   const { id } = req.params;
 
   if (!ObjectId.isValid(id)) {

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library API Test</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <section>
+
+    <h1>Welcome to the Library</h1>
+
+    <div>
+
+      <% if (userName) { %>
+        <h2>You're logged in as <%= userName %></h2>
+        <a class="logout" href="http://localhost:8080/logout">Logout</a>
+      <% } else { %>
+        <h2>You're logged out. <br>You need to be authenticated to add, update or delete any book or member.</h2>
+        <a class="login" href="http://localhost:8080/login">Login</a>
+      <% } %>
+
+    </div>
+
+  </section>
+  
+</body>
+</html>

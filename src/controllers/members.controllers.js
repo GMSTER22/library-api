@@ -54,6 +54,11 @@ const addMember = async (req, res, next) => {
     } 
   } 
   */
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_members"
+      ]
+  }] */
   const member = {
     name: req.body.name,
     email: req.body.email,
@@ -90,6 +95,11 @@ const updateMember = async (req, res, next) => {
     } 
   } 
   */
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_members"
+      ]
+  }] */
   const { id } = req.params;
 
   if (!ObjectId.isValid(id)) {
@@ -124,6 +134,11 @@ const updateMember = async (req, res, next) => {
 const deleteMember = async (req, res, next) => {
   // #swagger.tags=['Members']
   // #swagger.description = 'Endpoint to delete a specific Member'
+  /* #swagger.security = [{
+      "oAuthSample": [
+        "write_members"
+      ]
+  }] */
   const { id } = req.params;
 
   if (!ObjectId.isValid(id)) {

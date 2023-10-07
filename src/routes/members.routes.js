@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { isAuthenticated } = require('../middleware/authenticate');
 const { memberValidationRules, validate } = require('../helpers/validate');
 const {
   getAll,
@@ -12,10 +13,10 @@ router.get('/', getAll);
 
 router.get('/:id', getSingle);
 
-router.post('/', memberValidationRules, validate, addMember);
+router.post('/', isAuthenticated, memberValidationRules, validate, addMember);
 
-router.put('/:id', memberValidationRules, validate, updateMember);
+router.put('/:id', isAuthenticated, memberValidationRules, validate, updateMember);
 
-router.delete('/:id', deleteMember);
+router.delete('/:id', isAuthenticated, deleteMember);
 
 module.exports = router;

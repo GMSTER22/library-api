@@ -7,17 +7,57 @@
   },
   "host": "library-api-cuda.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "oAuthSample": {
+      "type": "oauth2",
+      "description": "This API uses OAuth 2 with the Authorization code grant flow",
+      "authorizationUrl": "https://library-api-cuda.onrender.com/login",
+      "flow": "authorizationCode",
+      "scopes": {
+        "write_books": "modify books in your account",
+        "write_members": "modify members in your account"
+      }
+    }
+  },
   "paths": {
     "/": {
       "get": {
         "tags": [
-          "Hello World"
+          "Home"
         ],
         "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to login",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to logout",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -99,10 +139,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_books"
+            ]
+          }
+        ]
       }
     },
     "/books/{id}": {
@@ -199,10 +249,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_books"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -224,10 +284,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_books"
+            ]
+          }
+        ]
       }
     },
     "/members/": {
@@ -293,10 +363,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_members"
+            ]
+          }
+        ]
       }
     },
     "/members/{id}": {
@@ -379,10 +459,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_members"
+            ]
+          }
+        ]
       },
       "delete": {
         "tags": [
@@ -404,10 +494,20 @@
           "400": {
             "description": "Bad Request"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "500": {
             "description": "Internal Server Error"
           }
-        }
+        },
+        "security": [
+          {
+            "oAuthSample": [
+              "write_members"
+            ]
+          }
+        ]
       }
     }
   }

@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ececec;
+  overflow: hidden;
+}
+
+section {
+  display: inline-block;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: inset 0px 0px 5px #a09f9f;
+}
+
+a {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+a.login {
+  background-color: green;
+}
+
+a.logout {
+  background-color: red;
+}
+
+h1 {
+  margin: 0 0 30px;
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+}
