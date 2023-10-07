@@ -13,7 +13,6 @@ router.use('/', swaggerDocRouter);
 
 router.get('/', (req, res) => {
   // #swagger.tags=['Home']
-  console.log(req.session.user);
   res.render('index', { userName: req.session.user ? req.session.user.displayName : null });
   // res.send(req.session.user ? `Logged in as ${req.session.user.displayName}` : 'Logged Out');
 });
