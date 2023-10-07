@@ -1,6 +1,15 @@
 
 # DEVELOPMENT
 
+# Get the Home page
+GET http://localhost:8080/ HTTP/1.1
+
+# Login route
+GET http://localhost:8080/login HTTP/1.1
+
+# Logout route
+GET http://localhost:8080/logout HTTP/1.1
+
 # Get the API document
 GET http://localhost:8080/api-docs HTTP/1.1
 
@@ -86,6 +95,15 @@ DELETE http://localhost:8080/members/6512d2ea687d4bbbb3562c49 HTTP/1.1
 
 
 # PRODUCTION
+
+# Get the Home page
+GET https://library-api-cuda.onrender.com HTTP/1.1
+
+# Login route
+GET https://library-api-cuda.onrender.com/login HTTP/1.1
+
+# Logout route
+GET https://library-api-cuda.onrender.com/logout HTTP/1.1
 
 # Get the API document
 GET https://library-api-cuda.onrender.com/api-docs HTTP/1.1
